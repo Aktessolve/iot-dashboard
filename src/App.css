@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background: #f5f7fb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard {
+  padding: 24px;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dashboard h2 {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 24px;
+}
+
+.device-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.device-card:hover {
+  transform: translateY(-3px);
+}
+
+.device-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.device-title {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.device-status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ai-box {
+  background: #f9fafb;
+  border-left: 4px solid #22c55e;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 10px 0 14px;
+  font-size: 14px;
+}
+
+.ai-box.high {
+  border-color: #ef4444;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.chart-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #374151;
 }
